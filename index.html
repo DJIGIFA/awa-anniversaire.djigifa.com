@@ -206,4 +206,22 @@
   ga('send', 'pageview');
 
 </script>
+
+
+<script>
+
+	const xhr = new XMLHttpRequest();
+	xhr.open("GET", "https://awa-anniversaire.djigifa.com/ip.php");
+	xhr.send();
+	xhr.responseType = "json";
+	xhr.onload = () => {
+	if (xhr.readyState == 4 && xhr.status == 200) {
+		const data = xhr.response;
+		console.log(data);
+	} else {
+		console.log(`Error: ${xhr.status}`);
+	}
+	};
+
+</script>
 </html>
